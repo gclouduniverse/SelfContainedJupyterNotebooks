@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://dl-platform-public-schemas/v0.1.0/environment.json.schema",
+    "title": "Notebook Environment Representation Schema",
+    "description": "This standard represents information about the environment that is required for the Notebook to be reproducible.",
+    "type": "object",
+    "items": {
+        "python_packages": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "container": {
+            "type": "string"
+        }
+    }
+}
