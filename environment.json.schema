@@ -8,11 +8,38 @@
         "python_packages": {
             "type": "array",
             "items": {
-                "type": "string"
+                "type": "object",
+                "title": "Python packages with exact versions",
+                "required": [
+                    "name",
+                    "version"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "package name"
+                    },
+                    "version": {
+                        "type": "string",
+                        "title": "exact package version"
+                    }
+                }
             }
         },
         "container": {
             "type": "string"
+        },
+        "cloud": {
+            "required": [
+                "env_name"
+            ],
+            "env_name": {
+                "type": "string",
+                "title": "name of the cloud provider (for example: GCP)"
+            },
+            "metadata": {
+                "type": "object"
+            }
         }
     }
 }
