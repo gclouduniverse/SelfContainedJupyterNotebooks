@@ -23,7 +23,7 @@ if __name__ == "__main__":
         ## Adding metadat for testing
         if args.test:
             nb_obj.metadata["env"] = {
-                "container": "gcr.io/deeplearning-platform-release/pytorch-cpu"
+                "container": "gcr.io/deeplearning-platform-release/base-cpu:m39"
             }
         ##
         container_uri = get_container_uri_from_nb_dict(nb_obj)
