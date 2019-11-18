@@ -50,5 +50,5 @@ echo "Waiting for finalization of startup."
 sleep 15
 
 echo "Copying notebook."
-gcloud compute scp "${NOTEBOOK}" "${INSTANCE_NAME}:/home/jupyter/$(basename ${NOTEBOOK})"
+gcloud compute scp "${NOTEBOOK}" "jupyter@${INSTANCE_NAME}:~/"
 
